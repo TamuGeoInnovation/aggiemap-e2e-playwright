@@ -7,6 +7,8 @@ Primary repository for collaborative Aggiemap E2E Playwright tests
 - **Node.js**: Version 18.x or higher (tested with v20.19.5)
 - **npm**: Version 9.x or higher (tested with v10.8.2)
 
+> **Note**: If you use [nvm](https://github.com/nvm-sh/nvm), you can run `nvm use` to automatically switch to the correct Node version (specified in `.nvmrc`).
+
 You can check your current versions by running:
 ```bash
 node --version
@@ -104,6 +106,16 @@ test.describe('Feature Name', () => {
 });
 ```
 
+### Page Object Model
+
+For better test organization and maintainability, consider using the Page Object Model pattern. Page objects are located in `tests/pages/`. See `tests/example-page-object.spec.ts` for an example.
+
+Benefits of Page Object Model:
+- Encapsulates page elements and interactions
+- Reduces code duplication
+- Makes tests easier to maintain
+- Improves test readability
+
 ## Test Code Generation
 
 Playwright provides a code generator to help you write tests. Run:
@@ -125,10 +137,21 @@ The Playwright configuration is defined in `playwright.config.ts`. You can custo
 
 ## CI/CD Integration
 
+The repository includes a GitHub Actions workflow (`.github/workflows/playwright.yml`) that runs tests automatically on push and pull requests.
+
 The configuration is optimized for CI environments:
 - Tests retry automatically on failure (2 retries on CI)
 - Tests run sequentially on CI to avoid resource contention
 - `test.only` calls will fail the build on CI
+- Test reports are saved as artifacts for 30 days
+
+### Viewing CI Test Reports
+
+When tests run in CI, the HTML report is uploaded as an artifact. To view it:
+1. Go to the Actions tab in GitHub
+2. Click on the workflow run
+3. Download the `playwright-report` artifact
+4. Extract and open `index.html` in a browser
 
 ## Documentation
 
