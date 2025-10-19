@@ -2,6 +2,24 @@
 
 This directory contains all Playwright E2E tests for the Aggiemap application.
 
+# AggieMap E2E — Ground Rules (POM-first, Parallel Teams)
+
+**Location:** All work stays inside `tests/pages`.
+**Ownership:** Each team owns only its area folders; do not edit others'.
+**Selectors:** Prefer roles/labels; request `data-testid` only for your scope. Prefix with your team's prefix.
+**Stability:** No fixed sleeps. Use expectations, URL or request assertions.
+**Deliverables per team:**
+
+- A short `README.md` in your team folder describing: Scope, POM APIs (names only), DoD, Dependencies, TestID prefix.
+- Independent specs under your `specs/` team folder.
+- If you add `data-testid`s, list them in your PR description.
+
+**Definition of Done (DoD) — for every team PR**
+
+- Deterministic locally across two consecutive runs
+- HTML report and trace artifacts enabled
+- No edits outside your team folders
+
 ## Structure
 
 ```
