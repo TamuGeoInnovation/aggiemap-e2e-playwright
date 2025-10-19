@@ -2,14 +2,47 @@
 
 This directory contains all Playwright E2E tests for the Aggiemap application.
 
+## Methodology
+
+These tests validate user experiences and workflows, beginning from application startup through various UI interactions such as loading the application, navigating sidebar features, performing searches, and adjusting settings. The goal is to ensure that application updates maintain consistent behavior and provide immediate visibility into potential feature regressions.
+
+# AggieMap E2E — Ground Rules (POM-first (Page Object Model), Parallel Teams)
+
+**Location:** All work stays inside `tests/pages`.
+**Ownership:** Each team owns only its area folders; do not edit others'.
+**Selectors:** Prefer roles/labels; request `data-testid` only for your scope. Prefix with your team's prefix.
+**Stability:** No fixed sleeps. Use expectations, URL or request assertions.
+**Deliverables per team:**
+
+- A short `README.md` in your team folder describing: Scope, POM APIs (names only), DoD, Dependencies, TestID prefix.
+- Independent specs under your `specs/` team folder.
+- If you add `data-testid`s, list them in your PR description.
+
+See [Team Index](./TEAM_INDEX.md) for team assignments and details.
+
+**Definition of Done (DoD) — for every team PR**
+
+- Deterministic locally across two consecutive runs
+- HTML report and trace artifacts enabled
+- No edits outside your team folders
+
 ## Structure
 
 ```
 tests/
-├── pages/              # Page Object Models
-│   └── *.page.ts      # Page objects for reusable page interactions
-├── *.spec.ts          # Test specification files
-└── README.md          # This file
+├── pages/
+│   ├── example/
+│   │   ├── po/
+│   │   │   └── *.page.ts
+│   │   └── specs/
+│   │       └── *.spec.ts
+│   └── [team-name]/
+│       ├── po/
+│       │   └── *.page.ts
+│       ├── specs/
+│       │   └── *.spec.ts
+│       └── README.md
+└── README.md
 ```
 
 ## Naming Conventions
@@ -19,9 +52,8 @@ tests/
 
 ## Examples
 
-- `example.spec.ts` - Basic test structure
-- `example-page-object.spec.ts` - Test using Page Object Model
-- `pages/playwright-home.page.ts` - Example page object
+- `pages/example/specs/example-page-object.spec.ts` - Test using Page Object Model
+- `pages/example/po/playwright-home.page.ts` - Example page object
 
 ## Best Practices
 
