@@ -6,6 +6,12 @@
 - Click / zoom interactions
 - Feature popup open/close lifecycle
 
+**Test Checklist**
+
+- [ ] Does clicking on map features summon popup?
+- [ ] Can popup be dismissed through clicking on the x?
+- [ ] Can popup be dismissed with ESC key?
+
 **Owned Paths**
 
 - Specs: `tests/pages/map/specs`

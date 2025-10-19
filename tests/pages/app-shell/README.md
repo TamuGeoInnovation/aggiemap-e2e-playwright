@@ -7,6 +7,13 @@
 - Sidebar show/hide
 - 2D/3D toggle basic behavior
 
+**Test Checklist**
+
+- [ ] Can the sidebar be visible state be toggled?
+- [ ] Does switching tabs update the page route?
+- [ ] Does the 2D/3D toggle work between both modes?
+- [ ] Does switching between modes preserve visible extent?
+
 **Owned Paths**
 
 - Specs: `tests/pages/app-shell/specs`

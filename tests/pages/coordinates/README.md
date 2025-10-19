@@ -5,6 +5,12 @@
 - Clicked coordinates accuracy
 - Clipboard copy format validation
 
+**Test Checklist**
+
+- [ ] Does clicking a location on a map accurately show the clicked coordinates?
+- [ ] Does clicking on the widget successfully copy the coordinates to the clipboard?
+- [ ] Do the clipboard coordinates follow lat/lon format?
+
 **Owned Paths**
 
 - Specs: `tests/pages/coordinates/specs`

@@ -6,6 +6,12 @@
 - Filtering/search truthy/falsy
 - Empty-state messaging
 
+**Test Checklist**
+
+- [ ] Does it show a loading state?
+- [ ] Does searching and filtering work for truthy/falsy values?
+- [ ] Does a falsy result show a message?
+
 **Owned Paths**
 
 - Specs: `tests/pages/directory/specs`

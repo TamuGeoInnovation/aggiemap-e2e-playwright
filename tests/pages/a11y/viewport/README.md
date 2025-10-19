@@ -7,6 +7,15 @@
 - Zoom & popup behavior
 - ESC and standard keys behavior
 
+**Test Checklist**
+
+- [ ] Vision-impaired users can use keyboard navigation keys to navigate and select features within a small view window (https://aggiemap.tamu.edu/instructions)
+- [ ] Can viewport mode be entered?
+- [ ] Can viewport mode be exited?
+- [ ] Does viewport mode display features?
+- [ ] Does selecting a feature zoom?
+- [ ] Does the zoom action also trigger the popup?
+
 **Owned Paths**
 
 - Specs: `tests/pages/a11y/viewport/specs`

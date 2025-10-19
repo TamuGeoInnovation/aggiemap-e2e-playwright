@@ -4,6 +4,10 @@
 
 - TS external links redirect to correct destination
 
+**Test Checklist**
+
+- [ ] Does the TS link redirect go to the right place?
+
 **Owned Paths**
 
 - Specs: `tests/pages/bus/specs`

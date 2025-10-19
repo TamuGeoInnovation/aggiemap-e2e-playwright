@@ -6,6 +6,11 @@
 - State reflection on map
 - Non-experimental settings
 
+**Test Checklist**
+
+- [ ] Does basemap selection work?
+- [ ] Does it accurately represent the loaded basemap?
+
 **Owned Paths**
 
 - Specs: `tests/pages/sidebar/settings/specs`
